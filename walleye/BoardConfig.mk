@@ -41,5 +41,15 @@ TARGET_RECOVERY_UI_LIB := \
     librecovery_ui_walleye \
     libfstab
 
+# Board uses A/B OTA.
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vbmeta \
+    dtbo \
+    vendor
+
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_muskie_defconfig
